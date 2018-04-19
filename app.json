@@ -1,0 +1,30 @@
+{
+  "pages":[
+    "pages/apply/apply",
+    "pages/info/info",
+    "pages/center/center"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "selectedColor": "#1296db",
+    "list": [
+      {
+        "pagePath": "pages/apply/apply",
+        "text": "学院车证"
+      },
+      {
+        "pagePath": "pages/info/info",
+        "text": "交通概况"
+      },
+      {
+        "pagePath": "pages/center/center",
+        "text": "个人中心"
+      }
+    ]
+  }
+}

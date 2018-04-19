@@ -1,0 +1,2 @@
+<view>center</view>
+<view>{{nickName}}</view>
