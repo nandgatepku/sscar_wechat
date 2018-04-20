@@ -7,3 +7,5 @@
  </view>
 <button size="default" formType="submit">提交</button>
 </form>
+<view>{{obct}}</view>
+<view>{{obcdata}}</view>

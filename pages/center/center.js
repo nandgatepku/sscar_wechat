@@ -4,7 +4,9 @@ var app = getApp()
 Page({
 
   data: {
-    tempFilePaths: '../../images/555.png'
+    tempFilePaths: '../../images/555.png',
+    obct:'未识别到驾驶证',
+    obcdata: []
   },
 
   /**
@@ -96,7 +98,14 @@ Page({
             'openId': that.data.openId
           },  //其它的表单信息  
           success: function (res) {
-            console.log(res)
+            var obc = JSON.parse(res.data);
+            if(1){
+              that.setData({
+                obct: '识别成功',
+                obcdata:obc
+              })
+            }
+            console.log(obc.code)
           }  
         })
       }
