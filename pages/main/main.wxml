@@ -1,0 +1,13 @@
+<!--pages/main/main.wxml-->
+<view class="container">
+<image class="background" src="../../images/back.jpg"></image>
+<image class="pkulogo" src="../../images/pkulogo.png"></image>
+<image class="pkuzi" src="../../images/pkuzi.png" mode="widthFix"></image>
+<image class="zheng" src="../../images/555.png"></image>
+<block wx:if="{{have}}">
+  <button type="defaule" bindtap="">查看详情</button>
+</block>
+<block wx:else>
+  <button class="tolaw" type="defaule" bindtap="tolaw">立即申请</button>
+</block>
+</view>

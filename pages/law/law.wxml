@@ -1,0 +1,13 @@
+<block class="container">
+<view class="title">申请条款</view>
+<scroll-view scroll-y class="content">
+  <view>1、遵守北京大学软件与微电子学院校园交通管理规定，服从学院管理，接受并配合门卫人员和校园巡查人员的验证检查，服从指挥。</view>
+  <view>2、进入校园后，文明行车，限速15公里/小时行驶，避让一切行人和非机动车，不鸣笛，不使用远光灯，不占道停车，不占消防通道。</view>
+  <view>3、妥善保管该通行证，专车专用，不伪造车证，不为可能导致伪造的扫描、复印、拍照等行为提供便利。车证正向放置。 </view>
+  <view>4、不运送与学校无工作关系的人员入校,不为校园违规行为提供便利。</view>
+  <view>5、如学校需要,及时挪走车辆。</view>
+  <view>本人郑重声明,已阅知并承诺履行上述条款,如有违反,自愿接受限制入校禁令。</view>
+</scroll-view>
+<button class="toapply" type="default" bindtap="toapply">接受</button>
+<button class="toback" type="default" bindtap="toback">不接受</button>
+</block>

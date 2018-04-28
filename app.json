@@ -1,20 +1,22 @@
 {
   "pages":[
-    "pages/apply/apply",
+    "pages/main/main",
     "pages/info/info",
-    "pages/center/center"
+    "pages/center/center",
+    "pages/apply/apply",
+    "pages/law/law"
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarBackgroundColor": "#7bb1cb",
+    "navigationBarTitleText": "金苑路老司机",
     "navigationBarTextStyle":"black"
   },
   "tabBar": {
     "selectedColor": "#1296db",
     "list": [
       {
-        "pagePath": "pages/apply/apply",
+        "pagePath": "pages/main/main",
         "text": "学院车证"
       },
       {

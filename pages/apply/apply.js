@@ -1,18 +1,41 @@
 // pages/apply/apply.js
+var util = require('../../utils/util.js')
+var app = getApp()
 Page({
 
-  /**
-   * 页面的初始数据
-   */
   data: {
-  
+    jia_front: '../../images/t.jpg',
+    jia_back: '../../images/t.jpg',
+    xing_front: '../../images/t.jpg',
+    xing_back: '../../images/t.jpg',
+    xue: '../../images/t.jpg',
+    car_front: '../../images/t.jpg',
+    obct:'请上传照片',
+    obcshow : 0,
+    obcname: [],
+    obcid:[],
+    obccar:[],
+    obcend:[],
+    obcauth:[],
+    obcadd:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-  
+  onLoad: function () {
+    var that = this;
+    wx.getStorage({
+      key: 'obj',
+      success: function (res) {
+        console.log(res.data.openId)
+        that.setData({
+          nickName:res.data.nickName,
+          openId: res.data.openId
+        })
+      }
+    })
+
   },
 
   /**
@@ -62,5 +85,99 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+
+  up_driver_front: function () {
+    var that = this
+    wx.chooseImage({
+      count: 1,
+      sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图
+      sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
+      success: function (res) {
+        var jia_front = res.tempFilePaths
+        that.setData({
+          jia_front: res.tempFilePaths[0]
+        })
+        console.log(jia_front)
+        wx.setStorage({ key: "img_jia_front", data: jia_front })
+// 存入私有文件夹
+        wx.uploadFile({
+          url: "https://sscar.ptczn.cn/index.php/index/index/upload",
+          filePath: jia_front[0],
+          name: 'add_image', //文件对应的参数名字(key)  
+          formData: {
+            'openId': that.data.openId,
+            'which_one':1
+          },  //其它的表单信息  
+          success: function (res) {
+            console.log(res);
+            
+            }            
+        })        
+//公开识别
+        wx.uploadFile({
+          url: "https://sscar.ptczn.cn/index.php/index/index/recog_driver_front",
+          filePath: jia_front[0],
+          name: 'add_image', //文件对应的参数名字(key)  
+          formData: {
+            'openId': that.data.openId
+          },  //其它的表单信息  
+          success: function (res) {
+            console.log(res);
+            var obc_tmp = JSON.parse(res.data);
+            var obc = JSON.parse(obc_tmp);
+            if(obc.code == 0){
+              that.setData({
+                obct: '识别成功',
+                obcshow : 1,
+                obcid: obc.data.items[0].itemstring,
+                obcname: obc.data.items[1].itemstring,
+                obccar: obc.data.items[7].itemstring,
+                obcend: obc.data.items[9].itemstring,
+                obcauth: obc.data.items[10].itemstring,
+                obcadd: obc.data.items[4].itemstring
+              })
+            }else{
+              that.setData({
+                obct: '未识别到驾驶证'
+            })
+            }
+            console.log(obc.data.items)
+          }  
+        })
+      }
+    })
+  },
+
+
+  up_jia_back: function () {
+    var that = this
+    wx.chooseImage({
+      count: 1,
+      sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图
+      sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
+      success: function (res) {
+        var jia_back = res.tempFilePaths
+        that.setData({
+          jia_back: res.tempFilePaths[0]
+        })
+        console.log(jia_back)
+        wx.setStorage({ key: "img_jia_back", data: jia_back })
+        // 存入私有文件夹
+        wx.uploadFile({
+          url: "https://sscar.ptczn.cn/index.php/index/index/inidcard",
+          filePath: jia_back[0],
+          name: 'add_image', //文件对应的参数名字(key)  
+          formData: {
+            'openId': that.data.openId
+          },  //其它的表单信息  
+          success: function (res) {
+            console.log(res)
+          }
+        })
+        
+      }
+    })
   }
+
 })

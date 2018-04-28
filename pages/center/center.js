@@ -2,11 +2,17 @@
 var util = require('../../utils/util.js')
 var app = getApp()
 Page({
-
+     
   data: {
     tempFilePaths: '../../images/555.png',
-    obct:'未识别到驾驶证',
-    obcdata: []
+    obct:'请上传照片',
+    obcshow : 0,
+    obcname: [],
+    obcid:[],
+    obccar:[],
+    obcend:[],
+    obcauth:[],
+    obcadd:[]
   },
 
   /**
@@ -24,7 +30,6 @@ Page({
         })
       }
     })
-
   },
 
   /**
@@ -98,14 +103,25 @@ Page({
             'openId': that.data.openId
           },  //其它的表单信息  
           success: function (res) {
-            var obc = JSON.parse(res.data);
-            if(1){
+            var obc_tmp = JSON.parse(res.data);
+            var obc = JSON.parse(obc_tmp);
+            if(obc.code == 0){
               that.setData({
                 obct: '识别成功',
-                obcdata:obc
+                obcshow : 1,
+                obcid: obc.data.items[0].itemstring,
+                obcname: obc.data.items[1].itemstring,
+                obccar: obc.data.items[7].itemstring,
+                obcend: obc.data.items[9].itemstring,
+                obcauth: obc.data.items[10].itemstring,
+                obcadd: obc.data.items[4].itemstring
               })
+            }else{
+              that.setData({
+                obct: '未识别到驾驶证'
+            })
             }
-            console.log(obc.code)
+            console.log(obc.data.items)
           }  
         })
       }

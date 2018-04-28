@@ -1,0 +1,55 @@
+/* pages/main/main.wxss */
+page{  
+  height: 100%;
+}
+.container{ 
+  width: 100%;
+  height: Auto;
+  background-color:#e6e6e6;
+  position: relative；
+}
+
+ .background{
+  top: 0rpx;
+  margin-left: 0rpx;
+  width: 750rpx;
+  height:1170rpx;
+  float: left;
+  position: absolute;
+}
+
+ .pkulogo{
+  top: 30rpx;
+  left:30rpx;
+  margin-left: 0rpx;
+  width: 70rpx;
+  height:70rpx;
+  float: left;
+  position: absolute;
+}
+
+ .pkuzi{
+  top: 40rpx;
+  left:110rpx;
+  margin-left: 0rpx;
+  width: 150rpx;
+  float: left;
+  position: absolute;
+}
+
+ .zheng{
+  top: 300rpx;
+  margin-left: 0rpx;
+  width: 750rpx;
+  float: left;
+  position: absolute;
+}
+
+ .tolaw{
+  top: 800rpx;
+  margin-left: 0rpx;
+  width: 230rpx;
+  height:80rpx;
+  float: left;
+  position: absolute;
+}

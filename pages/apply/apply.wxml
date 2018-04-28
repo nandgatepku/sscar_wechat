@@ -1,2 +1,23 @@
-<view>apply</view>
-<image src="../../images/555.png"></image>
+<block class="container">
+<view class="title">车证申请表</view>
+<view>
+   <image class="one" bindtap="up_jia_front"src="{{jia_front}}"></image>
+   <image class="two" bindtap="up_jia_back" src="{{jia_back}}"></image>
+   <image class="three" bindtap="up_xing_front"src="{{xing_front}}"></image>
+   <image class="four" bindtap="up_xing_front" src="{{xing_back}}"></image>
+   <image class="five" bindtap="up_xue" src="{{xue}}"></image>
+   <image class="six" bindtap="up_car_front" src="{{car_front}}"></image>
+</view>
+<button class="totxt" type="default" bindtap="totxt">提交</button>
+<view class="fin">
+<view>{{obct}}</view>
+<view wx:if="{{obcshow}}">
+<view>身份证号：{{obcid}}</view>
+<view>姓名：{{obcname}}</view>
+<view>准驾车型：{{obccar}}</view>
+<view>有效期至：{{obcend}}</view>
+<view>住址：{{obcadd}}</view>
+<view>发证机关：{{obcauth}}</view>
+</view>
+</view>
+</block>
