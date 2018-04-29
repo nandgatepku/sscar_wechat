@@ -1,0 +1,47 @@
+/* pages/txt/txt.wxss */
+page{  
+  height: 100%;
+}
+.container{ 
+  width: 100%;
+  height: Auto;
+  background-color:#e6e6e6;
+  position: relative;
+}
+
+ .background{
+  top: 0rpx;
+  margin-left: 0rpx;
+  width: 750rpx;
+  height:1170rpx;
+  float: left;
+  position: absolute;
+}
+
+ .title{
+  top: 30rpx;
+  left:30rpx;
+  margin-left: 0rpx;
+  float: left;
+  position: absolute;
+}
+
+ .content{
+  top:100rpx;
+  left:30rpx;
+  height: 600rpx;
+  width:670rpx;
+  float: left;
+  position: absolute;
+  word-break: break-all;
+}
+
+ .toapply{
+  top: 800rpx;
+  left:100rpx;
+  margin-left: 0rpx;
+  width: 230rpx;
+  height:80rpx;
+  float: left;
+  position: absolute;
+}

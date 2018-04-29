@@ -4,7 +4,8 @@
     "pages/info/info",
     "pages/center/center",
     "pages/apply/apply",
-    "pages/law/law"
+    "pages/law/law",
+    "pages/txt/txt"
   ],
   "window":{
     "backgroundTextStyle":"light",
