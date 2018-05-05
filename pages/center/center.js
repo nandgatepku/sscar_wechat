@@ -30,6 +30,15 @@ Page({
         })
       }
     })
+    wx.getStorage({
+      key: 'studentid',
+      success: function (res) {
+        console.log(res.data)
+        that.setData({
+          studentid: res.data
+        })
+      }
+    })
   },
 
   /**

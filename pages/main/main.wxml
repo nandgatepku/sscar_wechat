@@ -1,9 +1,13 @@
 <!--pages/main/main.wxml-->
 <view class="container">
-<image class="background" src="../../images/back.jpg"></image>
-<image class="pkulogo" src="../../images/pkulogo.png"></image>
-<image class="pkuzi" src="../../images/pkuzi.png" mode="widthFix"></image>
-<image class="zheng" src="../../images/555.png"></image>
+<!-- <image class="background" src="../../images/back.jpg"></image> -->
+<!-- <image class="pkulogo" src="../../images/pkulogo.png"></image> -->
+<!-- <image class="pkuzi" src="../../images/pkuzi.png" mode="widthFix"></image> -->
+<view class="ss_zi">北京大学软件与微电子学院</view>
+<!-- <image class="zheng" src="../../images/555.png"></image> -->
+<image class="big_logo" src="../../images/big_logo.png"></image>
+<view class="big_zi_1">机动车入校通行证</view>
+<view class="big_zi_2">在线申请系统</view>
 <block wx:if="{{have}}">
   <button type="defaule" bindtap="">查看详情</button>
 </block>

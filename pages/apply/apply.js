@@ -2,7 +2,6 @@
 var util = require('../../utils/util.js')
 var app = getApp()
 Page({
-
   data: {
     driver_front: '../../images/p1.png',
     driver_back: '../../images/p2.png',
@@ -16,7 +15,7 @@ Page({
     imgadd_driving_back: [],
     imgadd_studentcard:[],
     imgadd_car_front:[],
-    is_1_ok:0,
+    is_1_ok: 0,
     is_2_ok: 0,
     is_3_ok: 0,
     is_4_ok: 0,

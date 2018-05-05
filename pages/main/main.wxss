@@ -4,8 +4,8 @@ page{
 }
 .container{ 
   width: 100%;
-  height: Auto;
-  background-color:#e6e6e6;
+  height: 100%;
+  background-color:#ffffff;
   position: relative；
 }
 
@@ -37,6 +37,21 @@ page{
   position: absolute;
 }
 
+  .ss_zi{
+  /* left: 86rpx; */
+  top: 60rpx;
+  width: 600rpx;
+  height: 140rpx;
+  line-height: 70rpx;
+  border-radius: 4rpx;
+  background-color: rgba(255, 255, 255, 1);
+  color: #8b0012;
+  font-size: 48rpx;
+  text-align: center;
+  font-family: Arial;
+  position: absolute;
+  }
+
  .zheng{
   top: 300rpx;
   margin-left: 0rpx;
@@ -45,7 +60,7 @@ page{
   position: absolute;
 }
 
- .tolaw{
+ .tolaw_old{
   top: 800rpx;
   margin-left: 0rpx;
   width: 230rpx;
@@ -53,3 +68,54 @@ page{
   float: left;
   position: absolute;
 }
+
+  .tolaw{
+  /* left: 105px; */
+  top: 890rpx;
+  width: 330rpx;
+  height: 94rpx;
+  opacity: 0.75;
+  border-radius: 40rpx;
+  background-color: #8b0012; 
+  color: rgba(255, 255, 255, 1);
+  font-size: 40rpx;
+  text-align: center;
+  font-family: Microsoft Yahei;
+  position: absolute;
+  }
+
+  .big_logo{
+  /* left: 200rpx; */
+  top: 220rpx;
+  width: 360rpx;
+  height: 360rpx;
+  border-radius: 180rpx;
+  background-color: rgba(255, 255, 255, 1);
+  border: 2px solid rgba(170, 170, 170, 1);
+  position: absolute;
+  }
+
+  .big_zi_1{
+  /* left: 100rpx; */
+  top: 680rpx;
+  width: 560rpx;
+  height: 150rpx;
+  line-height: 70rpx;
+  color: rgba(170, 170, 170, 1);
+  font-size: 48rpx;
+  text-align: center;
+  font-family: Arial;
+  position: absolute;
+  }
+    .big_zi_2{
+  /* left: 100rpx; */
+  top: 750rpx;
+  width: 560rpx;
+  height: 150rpx;
+  line-height: 70rpx;
+  color: rgba(170, 170, 170, 1);
+  font-size: 48rpx;
+  text-align: center;
+  font-family: Arial;
+  position: absolute;
+  }

@@ -4,8 +4,8 @@ page{
 }
 .container{ 
   width: 100%;
-  height: Auto;
-  background-color:#e6e6e6;
+  height: 100%;
+  background-color:#ffffff;
   position: relative;
 }
 
@@ -26,7 +26,7 @@ page{
   position: absolute;
 }
 
- .content{
+ .contentold{
   top:100rpx;
   left:30rpx;
   height: 600rpx;
@@ -36,7 +36,21 @@ page{
   word-break: break-all;
 }
 
- .toapply{
+.content{
+ left: 40rpx; 
+top: 150rpx;
+width: 674rpx;
+height: 890rpx;
+line-height: 52rpx;
+color: rgba(170, 170, 170, 1);
+font-size: 36rpx;
+text-align: left;
+font-family: Arial;
+border: 4rpx solid rgba(170, 170, 170, 1);
+position: absolute;
+}
+
+ .toapply_old{
   top: 800rpx;
   left:100rpx;
   margin-left: 0rpx;
@@ -46,7 +60,39 @@ page{
   position: absolute;
 }
 
- .toback{
+.toapply{
+ left: 140rpx; 
+top: 1080rpx;
+width: 180rpx;
+height: 60rpx;
+opacity: 0.75;
+border-radius: 40rpx;
+background-color: #8b0012;
+color: rgba(255, 255, 255, 1);
+font-size: 40rpx;
+text-align: center;
+line-height:55rpx;
+font-family: Microsoft Yahei;
+position: absolute;
+}
+
+.toback{
+ left: 470rpx; 
+top: 1080rpx;
+width: 180rpx;
+height: 60rpx;
+opacity: 0.75;
+border-radius: 40rpx;
+background-color: #8b0012;
+color: rgba(255, 255, 255, 1);
+font-size: 40rpx;
+text-align: center;
+line-height:55rpx;
+font-family: Microsoft Yahei;
+position: absolute;
+}
+
+ .toback_old{
   top: 800rpx;
   left:400rpx;
   margin-left: 0rpx;

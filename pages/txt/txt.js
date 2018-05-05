@@ -47,7 +47,7 @@ Page({
           car_number: res.data[0].itemstring
         })
       }
-    })
+    })  
   
   },
 
@@ -146,5 +146,5 @@ Page({
         })
       }
     })
-  }, 
+  }
 })

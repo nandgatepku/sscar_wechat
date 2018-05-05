@@ -1,4 +1,5 @@
 <view>center</view>
 <view>{{nickName}}</view>
 <view>{{openId}}</view>
+<view>{{studentid}}</view>
 

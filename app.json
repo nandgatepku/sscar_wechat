@@ -9,12 +9,12 @@
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#7bb1cb",
-    "navigationBarTitleText": "金苑路老司机",
-    "navigationBarTextStyle":"black"
+    "navigationBarBackgroundColor": "#8b0012",
+    "navigationBarTitleText": "软微大兴车证申请",
+    "navigationBarTextStyle":"white"
   },
   "tabBar": {
-    "selectedColor": "#1296db",
+    "selectedColor": "#8b0012",
     "list": [
       {
         "pagePath": "pages/main/main",
