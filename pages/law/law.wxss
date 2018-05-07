@@ -20,7 +20,7 @@ page{
 
  .title{
   top: 30rpx;
-  left:30rpx;
+  left:300rpx;
   margin-left: 0rpx;
   float: left;
   position: absolute;
@@ -37,8 +37,8 @@ page{
 }
 
 .content{
- left: 40rpx; 
-top: 150rpx;
+left: 40rpx; 
+top: 120rpx;
 width: 674rpx;
 height: 890rpx;
 line-height: 52rpx;

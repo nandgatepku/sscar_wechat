@@ -3,11 +3,11 @@ var util = require('../../utils/util.js')
 var app = getApp()
 Page({
   data: {
-    driver_front: '../../images/p1.png',
-    driver_back: '../../images/p2.png',
-    driving_front: '../../images/p3.png',
-    driving_back: '../../images/p4.png',
-    studentcard: '../../images/p5.png',
+    driver_front: '../../images/one.jpg',
+    driver_back: '../../images/two.jpg',
+    driving_front: '../../images/three.jpg',
+    driving_back: '../../images/four.jpg',
+    studentcard: '../../images/five.jpg',
     car_front: '../../images/p6.png',
     imgadd_driver_front: [],
     imgadd_driver_back: [],

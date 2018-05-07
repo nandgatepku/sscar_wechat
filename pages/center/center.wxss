@@ -1,1 +1,133 @@
 /* pages/center/center.wxss */
+.container{ 
+  width: 100%;
+  height: 100%;
+  background-color:#ffffff;
+  position: relative;
+}
+
+ .title{
+  top: 30rpx;
+  left:280rpx;
+  margin-left: 0rpx;
+  float: left;
+  position: absolute;
+}
+
+.line_1{
+    top: 60rpx;
+    left:240rpx;
+  margin-left: 0rpx;
+  float: center;
+  position: absolute;
+}
+
+ .t_1{
+  top: 100rpx;
+  left:30rpx;
+  margin-left: 0rpx;
+  color: rgba(139, 0, 18, 1);
+  font-size: 1em;
+  float: left;
+  position: absolute;
+}
+
+ .t_1_1{
+  top: 150rpx;
+  left:30rpx;
+  margin-left: 0rpx;
+  font-size: 1em;
+  float: left;
+  position: absolute;
+}
+
+ .t_1_2{
+  top: 190rpx;
+  left:30rpx;
+  margin-left: 0rpx;
+  font-size: 1em;
+  float: left;
+  position: absolute;
+}
+
+.line_2{
+    top: 240rpx;
+    left:240rpx;
+  margin-left: 0rpx;
+  float: center;
+  position: absolute;
+}
+
+ .t_2{
+  top: 290rpx;
+  left:30rpx;
+  margin-left: 0rpx;
+  color: rgba(139, 0, 18, 1);
+  font-size: 1em;
+  float: left;
+  position: absolute;
+}
+
+ .t_2_1{
+  top: 340rpx;
+  left:30rpx;
+  margin-left: 0rpx;
+  font-size: 1em;
+  float: left;
+  position: absolute;
+}
+
+ .t_2_2{
+  top: 390rpx;
+  left:30rpx;
+  margin-left: 0rpx;
+  font-size: 1em;
+  float: left;
+  position: absolute;
+}
+
+ .t_2_3{
+  top: 440rpx;
+  left:30rpx;
+  margin-left: 0rpx;
+  font-size: 1em;
+  float: left;
+  position: absolute;
+}
+
+ .t_2_4{
+  top: 490rpx;
+  left:30rpx;
+  margin-left: 0rpx;
+  font-size: 1em;
+  float: left;
+  position: absolute;
+}
+
+.line_3{
+    top: 530rpx;
+    left:240rpx;
+  margin-left: 0rpx;
+  float: center;
+  position: absolute;
+}
+
+ .t_3{
+  top: 570rpx;
+  left:30rpx;
+  margin-left: 0rpx;
+  color: rgba(139, 0, 18, 1);
+  font-size: 1em;
+  float: left;
+  position: absolute;
+}
+
+ .t_3_1{
+  top: 620rpx;
+  left:30rpx;
+  margin-left: 0rpx;
+  font-size: 1em;
+  float: left;
+  position: relative;
+}
+

@@ -1,1 +1,10 @@
-<view>info</view>
+<block class="container">
+
+<view class="title">交通概况</view>
+<view class="line_1">--------------</view>
+<image class="ssmap" src="../../images/map.jpg" mode="widthFix"></image>
+<view class="title_2">实时充电桩</view>
+<view class="line_2">--------------</view>
+<view class="content_2">（此功能待定）</view>
+
+</block>

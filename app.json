@@ -18,15 +18,21 @@
     "list": [
       {
         "pagePath": "pages/main/main",
-        "text": "学院车证"
+        "text": "学院车证",
+        "iconPath": "images/22.png",
+        "selectedIconPath": "images/22.png"
       },
       {
         "pagePath": "pages/info/info",
-        "text": "交通概况"
+        "text": "交通概况",
+        "iconPath": "images/22.png",
+        "selectedIconPath": "images/22.png"
       },
       {
         "pagePath": "pages/center/center",
-        "text": "个人中心"
+        "text": "个人中心",
+        "iconPath": "images/22.png",
+        "selectedIconPath": "images/22.png"
       }
     ]
   }

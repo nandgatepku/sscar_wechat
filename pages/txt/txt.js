@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    studentid: []
   
   },
 
@@ -23,6 +24,15 @@ Page({
         })
       }
     }),
+      wx.getStorage({
+        key: 'studentid',
+        success: function (res) {
+          console.log(res.data)
+          that.setData({
+            studentid: res.data
+          })
+        }
+      });
 
     wx.getStorage({
       key: 'driver_front_data',
@@ -40,14 +50,28 @@ Page({
     }),
 
     wx.getStorage({
-      key: 'car_front_data',
+      key: 'driving_front_data',
       success: function (res) {
         console.log(res.data[0].itemstring)
         that.setData({
-          car_number: res.data[0].itemstring
+          driving_name: res.data[2].itemstring,
+          driving_type: res.data[2].itemstring,
+          brand: res.data[5].itemstring,
+          driving_start: res.data[8].itemstring
         })
       }
-    })  
+    }),
+
+      wx.getStorage({
+        key: 'car_front_data',
+        success: function (res) {
+          console.log(res.data[0].itemstring)
+          that.setData({
+            car_number: res.data[0].itemstring
+          })
+        }
+      })  
+
   
   },
 
@@ -55,6 +79,27 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
+    var that = this;
+    console.log(this.data.studentid);
+    var studentid = this.data.studentid;
+    wx.request({
+      url: 'https://sscar.ptczn.cn/index.php/index/index/get_data_api',
+      data: {
+        'studentid': studentid
+      },
+      method: "POST",
+      header: {
+        "Content-Type": "application/x-www-form-urlencoded"  //post
+      },
+      success: function (res) {
+        console.log(res.data);
+        that.setData({
+          name: res.data.name,
+          major_name: res.data.major_name,
+          telephone: res.data.telephone
+        })
+      }
+    })
   
   },
 
@@ -62,7 +107,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+   
   },
 
   /**
@@ -122,6 +167,10 @@ Page({
       data: {
         'driver_name': e.detail.value.driver_name,
         'car_number': e.detail.value.car_number,
+        'telephone': e.detail.value.telephone,
+        'driving_name': e.detail.value.driving_name,
+        'major_name': e.detail.value.major_name,
+        'studentid': e.detail.value.studentid,
         'openId': that.data.openId
       },
       method: "POST",

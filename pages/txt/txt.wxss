@@ -19,12 +19,158 @@ page{
 }
 
  .title{
-  top: 30rpx;
-  left:30rpx;
+  top: 20rpx;
+  left:230rpx;
   margin-left: 0rpx;
   float: left;
   position: absolute;
 }
+
+  .depar_title{
+left: 30rpx;
+top: 70rpx;
+width: 300rpx;
+height: 90rpx;
+line-height: 23px;
+color: rgba(139, 0, 18, 1);
+font-size: 1em;
+text-align: left;
+font-family: Arial;
+position: absolute;
+  }
+
+  .depar{
+    left: 30rpx;
+top: 120rpx;
+width: 650rpx;
+height: 70rpx;
+color: rgba(1, 1, 1, 1);
+font-size: 1em;
+text-align: left;
+font-family: Microsoft Yahei;
+border: 1px solid rgba(187, 187, 187, 1);
+position: absolute;
+  }
+
+  .driving_title{
+    left: 30rpx;
+top: 230rpx;
+width: 500rpx;
+height: 90rpx;
+line-height: 23px;
+color: rgba(139, 0, 18, 1);
+font-size: 1em;
+text-align: left;
+font-family: Arial;
+position: absolute;
+  }
+
+    .driving{
+    left: 30rpx;
+top: 290rpx;
+width: 650rpx;
+height: 70rpx;
+color: rgba(1, 1, 1, 1);
+font-size: 1em;
+text-align: left;
+font-family: Microsoft Yahei;
+border: 1px solid rgba(187, 187, 187, 1);
+position: absolute;
+  }
+
+  .driver_title{
+    left: 30rpx;
+top: 400rpx;
+width: 500rpx;
+height: 90rpx;
+line-height: 23px;
+color: rgba(139, 0, 18, 1);
+font-size: 1em;
+text-align: left;
+font-family: Arial;
+position: absolute;
+  }
+
+    .driver{
+    left: 30rpx;
+top: 450rpx;
+width: 650rpx;
+height: 70rpx;
+color: rgba(1, 1, 1, 1);
+font-size: 1em;
+text-align: left;
+font-family: Microsoft Yahei;
+border: 1px solid rgba(187, 187, 187, 1);
+position: absolute;
+  }
+
+    .telephone_title{
+    left: 30rpx;
+top: 560rpx;
+width: 500rpx;
+height: 90rpx;
+line-height: 23px;
+color: rgba(139, 0, 18, 1);
+font-size: 1em;
+text-align: left;
+font-family: Arial;
+position: absolute;
+  }
+
+    .telephone{
+    left: 30rpx;
+top: 610rpx;
+width: 650rpx;
+height: 70rpx;
+color: rgba(1, 1, 1, 1);
+font-size: 1em;
+text-align: left;
+font-family: Microsoft Yahei;
+border: 1px solid rgba(187, 187, 187, 1);
+position: absolute;
+  }
+
+  .car_title{
+   left: 30rpx;
+top: 720rpx;
+width: 500rpx;
+height: 90rpx;
+line-height: 23px;
+color: rgba(139, 0, 18, 1);
+font-size: 1em;
+text-align: left;
+font-family: Arial;
+position: absolute;
+  }
+
+    .car{
+    left: 30rpx;
+top: 770rpx;
+width: 650rpx;
+height: 70rpx;
+color: rgba(1, 1, 1, 1);
+font-size: 1em;
+text-align: left;
+font-family: Microsoft Yahei;
+border: 1px solid rgba(187, 187, 187, 1);
+position: absolute;
+  }
+
+  .submit{
+    left: 230rpx;
+   top: 890rpx;
+  width: 250rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  opacity: 0.75;
+  border-radius: 40rpx;
+  background-color: #8b0012; 
+  color: rgba(255, 255, 255, 1);
+  font-size: 40rpx;
+  text-align: center;
+  font-family: Microsoft Yahei;
+position: absolute;
+  }
 
  .content{
   top:100rpx;

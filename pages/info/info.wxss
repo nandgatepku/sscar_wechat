@@ -1,1 +1,57 @@
 /* pages/info/info.wxss */
+.container{ 
+  width: 100%;
+  height: 100%;
+  background-color:#ffffff;
+  position: relative;
+}
+
+ .title{
+  top: 30rpx;
+  left:280rpx;
+  margin-left: 0rpx;
+  float: left;
+  position: absolute;
+}
+
+.line_1{
+    top: 60rpx;
+    left:250rpx;
+  margin-left: 0rpx;
+  float: center;
+  position: absolute;
+}
+
+.ssmap{
+    top:130rpx;
+  left:30rpx;
+  margin-left: 0rpx;
+  width:670rpx;
+  float: left;
+  position: absolute;
+}
+
+ .title_2{
+  top: 600rpx;
+  left:280rpx;
+  margin-left: 0rpx;
+  float: left;
+  position: absolute;
+}
+
+.line_2{
+    top: 630rpx;
+    left:250rpx;
+  margin-left: 0rpx;
+  float: center;
+  position: absolute;
+}
+
+.content_2{
+    top: 660rpx;
+    left:270rpx;
+  margin-left: 0rpx;
+  font-size: 0.75em;
+  float: center;
+  position: absolute;
+}

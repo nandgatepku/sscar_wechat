@@ -1,5 +1,21 @@
-<view>center</view>
-<view>{{nickName}}</view>
-<view>{{openId}}</view>
-<view>{{studentid}}</view>
+<block class="container">
+<view class="title">个人中心</view>
+<view class="line_1">--------------</view>
+<view class="t_1">微信账号信息：</view>
+<view class="t_1_1">{{nickName}}</view>
+<view class="t_1_2">{{openId}}</view>
+<view class="line_2">--------------</view>
+<view class="t_2">pku身份信息：</view>
+<view class="t_2_1">{{studentid}}</view>
+<view class="t_2_2">{{name}}</view>
+<view class="t_2_3">{{major_name}}</view>
+<view class="t_2_4">{{telephone}}</view>
+<view class="line_3">--------------</view>
+<view class="t_3">车证信息：</view>
+<view class="t_3_1" wx:for="{{apply_id}}">
+<view class="td">  
+    申请号：{{item.id}}，状态：{{item.status}}，车号：{{item.car_number}} 
+  </view> 
+</view>
+</block>
 
