@@ -1,4 +1,5 @@
 /* pages/center/center.wxss */
+
 .container{ 
   width: 100%;
   height: 100%;
@@ -7,37 +8,44 @@
 }
 
  .title{
-  top: 30rpx;
-  left:280rpx;
+  top: 10rpx;
+  left:300rpx;
   margin-left: 0rpx;
   float: left;
+  font-size: 1.2em;
   position: absolute;
+  color: #ffffff; 
+  background-color: #8b0012; 
 }
 
-.line_1{
-    top: 60rpx;
-    left:240rpx;
-  margin-left: 0rpx;
-  float: center;
+.title_1{
+  height: 80rpx;
+  width: 750rpx;
+  top:0;
+  left:0;
   position: absolute;
+  color: #ffffff; 
+  background-color: #8b0012; 
 }
 
- .t_1{
-  top: 100rpx;
-  left:30rpx;
-  margin-left: 0rpx;
-  color: rgba(139, 0, 18, 1);
-  font-size: 1em;
-  float: left;
+.wximg{
+    top: 100rpx;
+    left:330rpx;
   position: absolute;
+    width: 100rpx;
+  height: 100rpx;
+  border: 0 solid #8b0012;
+   border-radius: 200rpx; 
+  background-color: #ffffff;
 }
 
  .t_1_1{
-  top: 150rpx;
-  left:30rpx;
+  top: 220rpx;
+  left:330rpx;
   margin-left: 0rpx;
   font-size: 1em;
   float: left;
+  color: #aaaaaa;
   position: absolute;
 }
 
@@ -126,7 +134,7 @@
   top: 620rpx;
   left:30rpx;
   margin-left: 0rpx;
-  font-size: 1em;
+  font-size: 0.9em;
   float: left;
   position: relative;
 }

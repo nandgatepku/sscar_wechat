@@ -1,6 +1,5 @@
 //app.js
 App({
-
   globalData: {
     userInfo: null
   },
@@ -19,7 +18,6 @@ App({
             var encryptData = info['encryptData'];
             var encryptedData = info['encryptedData']; 
             var iv = info['iv'];
-
             //3.小程序调用server获取token接口, 传入code, rawData, signature, encryptData.
             wx.request({
               url: API_URL,

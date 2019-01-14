@@ -1,21 +1,37 @@
 <block class="container">
+<view class="title_1">
 <view class="title">个人中心</view>
-<view class="line_1">--------------</view>
-<view class="t_1">微信账号信息：</view>
+</view>
+
+<image src='{{wx_img}}' class="wximg"></image>
 <view class="t_1_1">{{nickName}}</view>
-<view class="t_1_2">{{openId}}</view>
-<view class="line_2">--------------</view>
-<view class="t_2">pku身份信息：</view>
-<view class="t_2_1">{{studentid}}</view>
-<view class="t_2_2">{{name}}</view>
-<view class="t_2_3">{{major_name}}</view>
-<view class="t_2_4">{{telephone}}</view>
-<view class="line_3">--------------</view>
+
+<view class="t_2">PKU身份信息：</view>
+<view class="t_2_1">学号：{{studentid}}</view>
+<view class="t_2_2">姓名：{{name}}</view>
+<view class="t_2_3">专业：{{major_name}}</view>
+<view class="t_2_4">手机：{{telephone}}</view>
+
 <view class="t_3">车证信息：</view>
 <view class="t_3_1" wx:for="{{apply_id}}">
-<view class="td">  
-    申请号：{{item.id}}，状态：{{item.status}}，车号：{{item.car_number}} 
-  </view> 
+<block>
+    申请号：{{item.id}}，状态：
+    </block>
+    <block wx:if="{{item.status == 0}}">
+    待审，
+    </block>
+    <block wx:if="{{item.status == 1}}">
+    有效，
+    </block>
+     <block wx:if="{{item.status == 2}}">
+    驳回，
+    </block>
+    <block wx:if="{{item.status == 3}}">
+    过期，
+    </block>
+    <block>车号：{{item.car_number}}</block>
+    <view wx:if="{{item.status == 2}}">驳回理由：{{item.status_2_because}}</view>
+ 
 </view>
 </block>
 

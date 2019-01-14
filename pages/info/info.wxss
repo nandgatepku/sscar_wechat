@@ -7,19 +7,24 @@
 }
 
  .title{
-  top: 30rpx;
-  left:280rpx;
+  top: 10rpx;
+  left:300rpx;
   margin-left: 0rpx;
   float: left;
+  font-size: 1.2em;
   position: absolute;
+  color: #ffffff; 
+  background-color: #8b0012; 
 }
 
-.line_1{
-    top: 60rpx;
-    left:250rpx;
-  margin-left: 0rpx;
-  float: center;
+.title_1{
+  height: 80rpx;
+  width: 750rpx;
+  top:0;
+  left:0;
   position: absolute;
+  color: #ffffff; 
+  background-color: #8b0012; 
 }
 
 .ssmap{
@@ -39,11 +44,10 @@
   position: absolute;
 }
 
-.line_2{
-    top: 630rpx;
-    left:250rpx;
-  margin-left: 0rpx;
-  float: center;
+.map_css{
+  top:600rpx;
+  left:20rpx;
+    float: left;
   position: absolute;
 }
 

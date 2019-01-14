@@ -52,6 +52,7 @@ page{
   left:160rpx;
   margin-left: 0rpx;
   width:400rpx;
+  height: 300rpx;
   float: left;
   position: absolute;
 }
@@ -74,6 +75,7 @@ page{
   left:30rpx;
   margin-left: 0rpx;
   width:320rpx;
+  height:240rpx;
   float: left;
   position: absolute;
 }
@@ -83,6 +85,7 @@ page{
   left:400rpx;
   margin-left: 0rpx;
   width:320rpx;
+  height:240rpx;
   float: left;
   position: absolute;
 }
@@ -105,6 +108,7 @@ page{
   left:30rpx;
   margin-left: 0rpx;
   width:320rpx;
+  height:240rpx;
   float: left;
   position: absolute;
 }
@@ -114,6 +118,7 @@ page{
   left:400rpx;
   margin-left: 0rpx;
   width:320rpx;
+  height:240rpx;
   float: left;
   position: absolute;
 }
@@ -136,13 +141,14 @@ page{
   left:160rpx;
   margin-left: 0rpx;
   width:400rpx;
+  height:300rpx;
   float: left;
   position: absolute;
 }
 
  .totxt{
 left: 270rpx;
-top: 1400rpx;
+top: 1420rpx;
 width: 200rpx;
 height: 80rpx;
 line-height: 70rpx;

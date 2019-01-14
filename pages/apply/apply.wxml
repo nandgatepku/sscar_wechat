@@ -1,15 +1,15 @@
 <block class="container">
 <view class="title">上传有关照片</view>
 <view class="five_title">*上传学生证照片</view>
-   <image class="five" bindtap="up_studentcard" src="{{studentcard}}" mode="widthFix"></image>
+   <image class="five" bindtap="up_studentcard" src="{{studentcard}}"></image>
    <view class="one_two_title">*上传驾驶证照片</view>
-   <image class="one" bindtap="up_driver_front"src="{{driver_front}}" mode="widthFix"></image>
-   <image class="two" bindtap="up_driver_back" src="{{driver_back}}" mode="widthFix"></image>
+   <image class="one" bindtap="up_driver_front"src="{{driver_front}}"></image>
+   <image class="two" bindtap="up_driver_back" src="{{driver_back}}"></image>
    <view class="three_four_title">*上传行驶证照片</view>
-   <image class="three" bindtap="up_driving_front"src="{{driving_front}}" mode="widthFix"></image>
-   <image class="four" bindtap="up_driving_back" src="{{driving_back}}" mode="widthFix"></image>
+   <image class="three" bindtap="up_driving_front"src="{{driving_front}}" ></image>
+   <image class="four" bindtap="up_driving_back" src="{{driving_back}}"></image>
    <view class="six_title">*上传车辆照片</view>
-   <image class="six" bindtap="up_car_front" src="{{car_front}}" mode="widthFix"></image>
+   <image class="six" bindtap="up_car_front" src="{{car_front}}"></image>
 
 <button class="totxt" bindtap="totxt">提交</button>
 <!-- <view class="fin">

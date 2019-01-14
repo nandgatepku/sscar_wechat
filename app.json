@@ -8,10 +8,10 @@
     "pages/txt/txt"
   ],
   "window":{
-    "backgroundTextStyle":"light",
+    "backgroundTextStyle":"dark",
     "navigationBarBackgroundColor": "#8b0012",
     "navigationBarTitleText": "软微大兴车证申请",
-    "navigationBarTextStyle":"white"
+    "navigationBarTextStyle":"white"    
   },
   "tabBar": {
     "selectedColor": "#8b0012",
@@ -19,20 +19,20 @@
       {
         "pagePath": "pages/main/main",
         "text": "学院车证",
-        "iconPath": "images/22.png",
-        "selectedIconPath": "images/22.png"
+        "iconPath": "images/ico2.png",
+        "selectedIconPath": "images/ico21.png"
       },
       {
         "pagePath": "pages/info/info",
         "text": "交通概况",
-        "iconPath": "images/22.png",
-        "selectedIconPath": "images/22.png"
+        "iconPath": "images/ico1.png",
+        "selectedIconPath": "images/ico11.png"
       },
       {
         "pagePath": "pages/center/center",
         "text": "个人中心",
-        "iconPath": "images/22.png",
-        "selectedIconPath": "images/22.png"
+        "iconPath": "images/ico3.png",
+        "selectedIconPath": "images/ico31.png"
       }
     ]
   }

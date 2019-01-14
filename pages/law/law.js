@@ -72,8 +72,11 @@ Page({
   },
 
   toback: function () {
-    wx.reLaunch({
+    wx.switchTab({
       url: "/pages/main/main"
     })
+    // wx.reLaunch({
+    //   url: "/pages/main/main"
+    // })
   }
 })

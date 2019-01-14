@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    studentid: []
+    studentid: [],
+    apply_id:[]
   
   },
 
@@ -14,16 +15,22 @@ Page({
    */
   onLoad: function (options) {
     var that = this;
+    var apply_id = options.apply_id;
+    that.setData({
+      apply_id: apply_id
+    })
+    console.log(this.data.apply_id)
     wx.getStorage({
       key: 'obj',
       success: function (res) {
-        console.log(res.data.openId)
+        // console.log(res.data.openId)
         that.setData({
           nickName: res.data.nickName,
           openId: res.data.openId
         })
       }
     }),
+
       wx.getStorage({
         key: 'studentid',
         success: function (res) {
@@ -37,7 +44,7 @@ Page({
     wx.getStorage({
       key: 'driver_front_data',
         success: function (res) {
-          console.log(res.data[0].itemstring)
+          // console.log(res.data[0].itemstring)
           that.setData({
             driver_id: res.data[0].itemstring,
             driver_name: res.data[1].itemstring,
@@ -52,7 +59,7 @@ Page({
     wx.getStorage({
       key: 'driving_front_data',
       success: function (res) {
-        console.log(res.data[0].itemstring)
+        // console.log(res.data[0].itemstring)
         that.setData({
           driving_name: res.data[2].itemstring,
           driving_type: res.data[2].itemstring,
@@ -65,7 +72,7 @@ Page({
       wx.getStorage({
         key: 'car_front_data',
         success: function (res) {
-          console.log(res.data[0].itemstring)
+          // console.log(res.data[0].itemstring)
           that.setData({
             car_number: res.data[0].itemstring
           })
@@ -79,9 +86,11 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    var that = this;
-    console.log(this.data.studentid);
+
+    // console.log(this.data.studentid);
     var studentid = this.data.studentid;
+    var that = this;
+      
     wx.request({
       url: 'https://sscar.ptczn.cn/index.php/index/index/get_data_api',
       data: {
@@ -121,17 +130,6 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-    var that = this;
-    wx.getStorage({
-      key: 'obj',
-      success: function (res) {
-        console.log(res.data.openId)
-        that.setData({
-          nickName: res.data.nickName,
-          openId: res.data.openId
-        })
-      }
-    })
   
   },
 
@@ -161,7 +159,8 @@ Page({
     var formData = e.detail.value;
     var driver_name = e.detail.value.driver_name;
     var car_number = e.detail.value.car_number;
-    console.log(e.detail.value.driver_name);
+    // console.log(e.detail.value.driver_name);
+   
     wx.request({
       url: 'https://sscar.ptczn.cn/index.php/index/index/apply_txt',
       data: {
@@ -170,8 +169,9 @@ Page({
         'telephone': e.detail.value.telephone,
         'driving_name': e.detail.value.driving_name,
         'major_name': e.detail.value.major_name,
-        'studentid': e.detail.value.studentid,
-        'openId': that.data.openId
+        // 'studentid': e.detail.value.studentid,
+        'openId': that.data.openId,
+        'apply_id': that.data.apply_id
       },
       method: "POST",
       header: {
@@ -181,15 +181,18 @@ Page({
         console.log(res.data)
         wx.showModal({
           title: 'success',
-          content: '成功填写申请表，请等待审核。大约3个工作日',
+          content: '成功填写申请表，请等待审核。',
           confirmText: '好的',
           showCancel:false,
           success: function (res) {
             if (res.confirm) {
               console.log('用户点击确认')
-              wx.reLaunch({
+              wx.switchTab({
                 url: "/pages/main/main"
               })
+              // wx.reLaunch({
+              //   url: "/pages/main/main"
+              // })
             }
           }
         })

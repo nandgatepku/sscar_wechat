@@ -8,7 +8,7 @@ Page({
     driving_front: '../../images/three.jpg',
     driving_back: '../../images/four.jpg',
     studentcard: '../../images/five.jpg',
-    car_front: '../../images/p6.png',
+    car_front: '../../images/audi.png',
     imgadd_driver_front: [],
     imgadd_driver_back: [],
     imgadd_driving_front: [],
@@ -22,14 +22,8 @@ Page({
     is_5_ok: 0,
     is_6_ok: 0,
     obct:'请上传照片',
-    obcr:[],
-    obcshow : 0,
-    obcname: [],
-    obcid:[],
-    obccar:[],
-    obcend:[],
-    obcauth:[],
-    obcadd:[]
+    studentid:0,
+    apply_id:[]
   },
 
   /**
@@ -46,7 +40,16 @@ Page({
           openId: res.data.openId
         })
       }
-    })
+    }),
+      wx.getStorage({
+        key: 'studentid',
+        success: function (res) {
+          console.log(res.data)
+          that.setData({
+            studentid: res.data
+          })
+        }
+      });
 
   },
 
@@ -119,6 +122,7 @@ Page({
           name: 'add_image', //文件对应的参数名字(key)  
           formData: {
             'openId': that.data.openId,
+            'studentid': that.data.studentid,
             'which_one':1
           },  //其它的表单信息  
           success: function (res) {
@@ -136,6 +140,7 @@ Page({
           name: 'add_image', //文件对应的参数名字(key)  
           formData: {
             'openId': that.data.openId,
+            'studentid': that.data.studentid,
             'type':1
           },  //其它的表单信息  
           success: function (res) {
@@ -183,6 +188,7 @@ Page({
           name: 'add_image', //文件对应的参数名字(key)  
           formData: {
             'openId': that.data.openId,
+            'studentid': that.data.studentid,
             'which_one': 3
           },  //其它的表单信息  
           success: function (res) {
@@ -210,13 +216,6 @@ Page({
               that.setData({
                 obct: '识别成功',
                 is_3_ok: 1,
-                // obcshow: 1,
-                // obcid: obc.data.items[0].itemstring,
-                // obcname: obc.data.items[1].itemstring,
-                // obccar: obc.data.items[7].itemstring,
-                // obcend: obc.data.items[9].itemstring,
-                // obcauth: obc.data.items[10].itemstring,
-                // obcadd: obc.data.items[4].itemstring
               })
               wx.setStorage({ key: "driving_front_data", data: driving_front_data.data.items })
             } else {
@@ -252,6 +251,7 @@ Page({
           name: 'add_image', //文件对应的参数名字(key)  
           formData: {
             'openId': that.data.openId,
+            'studentid': that.data.studentid,
             'which_one': 2
           },  //其它的表单信息  
           success: function (res) {
@@ -286,6 +286,7 @@ Page({
           name: 'add_image', //文件对应的参数名字(key)  
           formData: {
             'openId': that.data.openId,
+            'studentid': that.data.studentid,
             'which_one': 4
           },  //其它的表单信息  
           success: function (res) {
@@ -321,6 +322,7 @@ Page({
           name: 'add_image', //文件对应的参数名字(key)  
           formData: {
             'openId': that.data.openId,
+            'studentid': that.data.studentid,
             'which_one': 5
           },  //其它的表单信息  
           success: function (res) {
@@ -354,6 +356,7 @@ Page({
           name: 'add_image', //文件对应的参数名字(key)  
           formData: {
             'openId': that.data.openId,
+            'studentid': that.data.studentid,
             'which_one': 6
           },  //其它的表单信息  
           success: function (res) {
@@ -368,13 +371,6 @@ Page({
               that.setData({
                 obct: '识别成功',
                 is_6_ok: 1,
-                // obcshow: 1,
-                // obcid: obc.data.items[0].itemstring,
-                // obcname: obc.data.items[1].itemstring,
-                // obccar: obc.data.items[7].itemstring,
-                // obcend: obc.data.items[9].itemstring,
-                // obcauth: obc.data.items[10].itemstring,
-                // obcadd: obc.data.items[4].itemstring
               })
               wx.setStorage({ key: "car_front_data", data: car_front_data.data.items })
             } else {
@@ -391,9 +387,36 @@ Page({
 
   totxt: function () {
     var that = this;
+    wx.request({
+      url: 'https://sscar.ptczn.cn/index.php/index/index/sql_photo',
+      data: {
+        // code: "oneyuan",
+        'driver_front': that.data.imgadd_driver_front,
+        'driver_back': that.data.imgadd_driver_back,
+        'driving_front': that.data.imgadd_driving_front,
+        'driving_back': that.data.imgadd_driving_back,
+        'studentcard': that.data.imgadd_studentcard,
+        'car_front': that.data.imgadd_car_front,
+        'openId': that.data.openId,
+        'studentid': that.data.studentid
+      },
+      method: "POST",
+      header: {
+        "Content-Type": "application/x-www-form-urlencoded"  //post
+      },
+
+      success: function (res) {
+        console.log(res.data.apply_id)
+        var apply_id = res.data.apply_id;
+        that.setData({
+          apply_id: res.data.apply_id
+        })
+        wx.setStorageSync('apply_id', res.data.apply_id)
+      }
+    })
     if (this.data.is_1_ok == 1 && this.data.is_2_ok == 1 && this.data.is_3_ok == 1 && this.data.is_4_ok == 1 && this.data.is_5_ok == 1 && this.data.is_6_ok==1){
       wx.navigateTo({
-        url: "/pages/txt/txt"
+        url: "/pages/txt/txt?apply_id=" + that.data.apply_id
       })
     }else{
       wx.showModal({
@@ -406,36 +429,10 @@ Page({
             console.log('用户点击返回尝试')
           } else if (res.cancel) {
             console.log('用户点击坚持提交')
-            wx.request({
-              url: 'https://sscar.ptczn.cn/index.php/index/index/sql_photo', 
-              data: {
-                // code: "oneyuan",
-                'driver_front': that.data.imgadd_driver_front,
-                'driver_back': that.data.imgadd_driver_back,
-                'driving_front': that.data.imgadd_driving_front,
-                'driving_back': that.data.imgadd_driving_back,
-                'studentcard': that.data.imgadd_studentcard,
-                'car_front': that.data.imgadd_car_front,
-                'openId': that.data.openId
-              },
-              method: "POST",
-              header: {
-                "Content-Type": "application/x-www-form-urlencoded"  //post
-              },
-              // complete: function (res) {
-              //   that.setData({
-              //     oneyuandata: res.data.data
-              //   });
-              //   if (res == null || res.data == null) {
-              //     reject(new Error('网络请求失败'))
-              //   }
-              // },
-              success: function (res) {
-                console.log(res)
-              }
-            })
+            
+            console.log(that.data.apply_id)
             wx.navigateTo({
-              url: "/pages/txt/txt"
+              url: "/pages/txt/txt?apply_id=" + that.data.apply_id
             })
           }
         }

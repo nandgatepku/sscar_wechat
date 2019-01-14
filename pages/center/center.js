@@ -12,7 +12,8 @@ Page({
     obcend:[],
     obcauth:[],
     obcadd:[],
-    studentid:[]
+    studentid:[],
+    wx_img:[]    
   },
 
   /**
@@ -26,7 +27,8 @@ Page({
         console.log(res.data.openId)
         that.setData({
           nickName:res.data.nickName,
-          openId: res.data.openId
+          openId: res.data.openId,
+          wx_img: res.data.avatarUrl,
         })
       }
     });
@@ -82,7 +84,8 @@ Page({
            'apply_id':res.data.res
           })
         }
-      })    
+      })
+
   },
 
   /**
@@ -109,8 +112,14 @@ Page({
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
-  
+  onPullDownRefresh: function () { 
+      wx.showNavigationBarLoading();
+      var that = this;
+      console.log(that.data.moment);
+      // 隐藏导航栏加载框  
+      wx.hideNavigationBarLoading();
+      // 停止下拉动作  
+      wx.stopPullDownRefresh();  
   },
 
   /**
